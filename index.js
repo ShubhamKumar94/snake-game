@@ -142,19 +142,33 @@ else{
 
 window.requestAnimationFrame(mainFn);
 window.addEventListener("keydown", e=>{
-      inputDir = {x:0,y:0};
+      //inputDir = {x:0,y:0};
       moveSound.play();
       switch(e.key){
         case 'ArrowUp':
+            if(inputDir.x === 0 && inputDir.y === 1){
+              return;  
+            }
             inputDir = {x:0, y:-1};
             break;
         case "ArrowDown" :
+            if(inputDir.x === 0 && inputDir.y === -1){
+                
+                return;  
+              }
+              
             inputDir = {x :0 , y : 1};
             break;
         case "ArrowLeft" :
+            if(inputDir.x === 1 && inputDir.y === 0){
+                return; 
+              }
             inputDir = {x : -1 , y : 0};
             break;
         case "ArrowRight" :
+            if(inputDir.x === -1 && inputDir.y === 0){
+                return;  
+              }
             inputDir = {x :1 , y : 0};
             break;  
         default :
