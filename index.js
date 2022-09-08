@@ -98,7 +98,7 @@ function gameFunction(){
       highScoreVal = score;
       localStorage.setItem("hiScore",JSON.stringify(highScoreVal)); 
       snakeHiScoreBoard.innerHTML = `High Score : ${highScoreVal}` ;
-      console.log("highScore");
+      
     }
    }
    //snake movement logic
@@ -137,7 +137,7 @@ if(highScore === null){
 else{
     highScoreVal = highScore;
     snakeHiScoreBoard.innerHTML = `High Score : ${highScoreVal}`
-    console.log("highScore");
+    
 }
 
 window.requestAnimationFrame(mainFn);
